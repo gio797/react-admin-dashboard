@@ -1,8 +1,30 @@
-function App() {
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 
-  return (
-    <div>Hello World</div>
+import Layout from "./components/Layout/Layout";
+import Users from "./pages/users/Users";
+import Products from "./pages/products/Products";
+import Login from "./pages/login/Login";
+import "../src/styles/global.scss";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="/" element={<Layout />}>
+        <Route path="users" element={<Users />} />
+        <Route path="products" element={<Products />} />
+      </Route>
+      <Route path="login" element={<Login />} />
+    </>
   )
+);
+
+function App() {
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
