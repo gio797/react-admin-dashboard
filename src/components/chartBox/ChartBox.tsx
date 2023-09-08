@@ -51,7 +51,7 @@ function ChartBox(props: Props) {
           >
             {props.percentage}
           </span>
-          <span className="duration">This month</span>
+          <span className="duration">this month</span>
         </div>
       </div>
     </div>
