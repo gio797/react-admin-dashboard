@@ -10,7 +10,7 @@ function Menu() {
           <span className="title">{item.title}</span>
 
           {item.listItems.map((item) => (
-            <Link className="list-item" to="/" key={item.id}>
+            <Link className="list-item" to={item.url} key={item.id}>
               <img src={item.icon} alt="" />
               <span className="list-item-title">{item.title}</span>
             </Link>
