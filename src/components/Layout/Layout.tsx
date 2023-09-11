@@ -2,6 +2,9 @@ import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import Menu from "../menu/Menu";
 import { Outlet } from "react-router-dom";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 function Layout() {
   return (
@@ -12,7 +15,9 @@ function Layout() {
           <Menu />
         </div>
         <div className="content-container">
-          <Outlet />
+          <QueryClientProvider client={queryClient}>
+            <Outlet />
+          </QueryClientProvider>
         </div>
       </div>
       <Footer />
