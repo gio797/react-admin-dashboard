@@ -2,7 +2,7 @@ import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import Menu from "../menu/Menu";
 import { Outlet } from "react-router-dom";
-import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();
 
